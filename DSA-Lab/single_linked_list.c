@@ -147,7 +147,7 @@ void sort(struct node* head){                               // sort a linked lis
 }
 
 
-void search(struct node* head,int key){                // binary search in list
+void search(struct node* head,int key){                // linear search in list
 	struct node *temp;
 	temp=head;
 	while(temp!=NULL){
