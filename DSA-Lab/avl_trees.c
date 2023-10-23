@@ -48,8 +48,8 @@ int getbf(struct tree* node){                           // function ot get balan
 
 struct tree* ll(struct tree* x){          // left left rotation         
 	struct tree* y=x->right;         //                                            x
-	struct tree* t2=y->left;		//										       \            
-	y->left=x;								//							           y
+	struct tree* t2=y->left;		               //                       \            
+	y->left=x;					  //                             y
 	x->right=t2;                                                           //      / \    
 	x->height=max(getheight(x->left),getheight(x->right))+1;               //     t2  z
 	y->height=max(getheight(y->left),getheight(y->right))+1;
@@ -59,9 +59,9 @@ struct tree* ll(struct tree* x){          // left left rotation
  
 struct tree* rr(struct tree* y){                 // right right rotation
 	struct tree* x=y->left;         //                                          y
-	struct tree* t2=x->right;       				//						   /
-	x->right=y;										//                        x								
-	y->left=t2;									//                          /   \   .
+	struct tree* t2=x->right;       				//	   /
+	x->right=y;					//                        x								
+	y->left=t2;				      //                          /   \   .
 	y->height=max(getheight(y->left),getheight(y->right))+1;	//        z     t2
 	x->height=max(getheight(x->left),getheight(x->right))+1; 
 	return x;      
